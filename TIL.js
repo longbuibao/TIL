@@ -57,3 +57,8 @@ const obj = {
 function foo() {
     console.log(arguments)
 }
+
+function fancyFunction(agrs, callback) {
+    callback(agrs)
+}
+fancyFunction('long', console.log)
