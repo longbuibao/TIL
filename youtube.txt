@@ -16,4 +16,11 @@ https://www.youtube.com/watch?v=3c-iBn73dDE&t=1112s&ab_channel=TechWorldwithNana
 --CONTAINER Port vs HOST Port
 --`sudo docker exec -it redis bash` start docker from outside
 -- `sudo docker --name <YOUR NAME TO DOCKER CONTAINER>`
+-- `sudo docker log <NAME OF CONTAINER>` 
+-- get the terminal of the CONTAINER that is running
+    -- `sudo docker ps` list all your CONTAINER are running
+    -- `sudo docker exec -it <ID OR NAME OF CONTAINER> bin/bash` -it mean that interactive terminal
+            -- you can navigate to any folder in this CONTAINER, this is look like a OS
+-- `sudo docker run` vs `sudo docker start`
+    -- `docker run` create a new CONTAINER from image, `docker start` working with docker CONTAINER
 ------
