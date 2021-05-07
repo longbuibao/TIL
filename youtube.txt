@@ -15,5 +15,5 @@ https://www.youtube.com/watch?v=3c-iBn73dDE&t=1112s&ab_channel=TechWorldwithNana
 --start, stop a CONTAINER with ID of the CONTAINER
 --CONTAINER Port vs HOST Port
 --`sudo docker exec -it redis bash` start docker from outside
-
+-- `sudo docker --name <YOUR NAME TO DOCKER CONTAINER>`
 ------
