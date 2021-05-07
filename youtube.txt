@@ -1,6 +1,19 @@
+May 7
+
 https://www.youtube.com/watch?v=LBgfSwX4GDI&ab_channel=HusseinNasser
 `Demystifying the Browser Networking Tab in Developer Tools With Examples`
+
+------
 
 https://www.youtube.com/watch?v=3c-iBn73dDE&t=1112s&ab_channel=TechWorldwithNana
 `Docker Tutorial for Beginners [FULL COURSE in 3 Hours]`
 
+`sudo docker ps` list all docker CONTAINER
+    -- `sudo docker ps -a` list all CONTAINER that stopped and running
+`sudo docker run` run a CONTAINER with a specified image
+    -- `sudo docker run [NAME OF IMAGE]` pull and run docker image -> CONTAINER
+--start, stop a CONTAINER with ID of the CONTAINER
+--CONTAINER Port vs HOST Port
+--`sudo docker exec -it redis bash` start docker from outside
+
+------
