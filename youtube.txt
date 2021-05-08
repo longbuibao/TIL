@@ -23,4 +23,14 @@ https://www.youtube.com/watch?v=3c-iBn73dDE&t=1112s&ab_channel=TechWorldwithNana
             -- you can navigate to any folder in this CONTAINER, this is look like a OS
 -- `sudo docker run` vs `sudo docker start`
     -- `docker run` create a new CONTAINER from image, `docker start` working with docker CONTAINER
+
 ------
+
+
+
+
+May 8
+
+Go Home - 500km from Ho Chi Minh City To my Home
+
+Dummy commit keeping my activities on github
