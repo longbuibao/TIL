@@ -30,7 +30,52 @@ https://www.youtube.com/watch?v=3c-iBn73dDE&t=1112s&ab_channel=TechWorldwithNana
 
 
 May 8
-
+------
 Go Home - 500km from Ho Chi Minh City To my Home
 
 Dummy commit keeping my activities on github
+------
+
+May 9
+------
+
+work flow with docker
+
+-- from docker hub, download an image, (mongodb,...), write your js code
+-- commit to github
+-- when commit to github, trigger a CI (Jenkins,...) Jenkins will build app and creates Docker image file
+-- Jenkins push your Docker file to Docker repos, Dev server will pull both tthe mongodb DOcker file and your js docker file 
+
+
+
+
+docker Networking
+-- create Isolated Docker network
+    -- mongodb and mongo express UI can talk to each other
+    -- nodejs go inside this network to talk to each other
+-- `docker network ls` list all network in docker
+-- `sudo docker network create [YOUR NAME, [mongo-network]]` create new network for mongo-network
+-- `sudo docker run -d \    
+> -p 8081:8081 \
+> -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin \
+> -e ME_CONFIG_MONGODB_ADMINPASSWORD=password \
+> -e ME_CONFIG_MONGODB_PORT=27017 \
+> -e ME_CONFIG_MONGODB_SERVER=mongodb \
+> -e ME_CONFIG_OPTIONS_EDITORTHEME=3024-day \
+> --net mongo-network \
+> --name mongo-express \
+> mongo-express  `
+    connect mongo-express to mongodb
+
+`
+sudo docker run -d \          
+-p 5000:27017 \
+-e MONGO_INITDB_ROOT_USERNAME=admin \
+-e MONGO_INITDB_ROOT_PASSWORD=password \
+--name mongodb \
+--net mongo-network \
+mongo
+`
+    create mongo CONTAINER
+
+------
