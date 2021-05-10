@@ -15,5 +15,81 @@ https://www.youtube.com/watch?v=3c-iBn73dDE&t=1112s&ab_channel=TechWorldwithNana
 --start, stop a CONTAINER with ID of the CONTAINER
 --CONTAINER Port vs HOST Port
 --`sudo docker exec -it redis bash` start docker from outside
+-- `sudo docker --name <YOUR NAME TO DOCKER CONTAINER>`
+-- `sudo docker logs <NAME OF CONTAINER>` 
+-- get the terminal of the CONTAINER that is running
+    -- `sudo docker ps` list all your CONTAINER are running
+    -- `sudo docker exec -it <ID OR NAME OF CONTAINER> bin/bash` -it mean that interactive terminal
+            -- you can navigate to any folder in this CONTAINER, this is look like a OS
+-- `sudo docker run` vs `sudo docker start`
+    -- `docker run` create a new CONTAINER from image, `docker start` working with docker CONTAINER
+
+------
+
+
+
+
+May 8
+------
+Go Home - 500km from Ho Chi Minh City To my Home
+
+Dummy commit keeping my activities on github
+------
+
+May 9
+------
+
+work flow with docker
+
+-- from docker hub, download an image, (mongodb,...), write your js code
+-- commit to github
+-- when commit to github, trigger a CI (Jenkins,...) Jenkins will build app and creates Docker image file
+-- Jenkins push your Docker file to Docker repos, Dev server will pull both tthe mongodb DOcker file and your js docker file 
+
+
+
+
+docker Networking
+-- create Isolated Docker network
+    -- mongodb and mongo express UI can talk to each other
+    -- nodejs go inside this network to talk to each other
+-- `docker network ls` list all network in docker
+-- `sudo docker network create [YOUR NAME, [mongo-network]]` create new network for mongo-network
+-- `sudo docker run -d \    
+> -p 8081:8081 \
+> -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin \
+> -e ME_CONFIG_MONGODB_ADMINPASSWORD=password \
+> -e ME_CONFIG_MONGODB_PORT=27017 \
+> -e ME_CONFIG_MONGODB_SERVER=mongodb \
+> -e ME_CONFIG_OPTIONS_EDITORTHEME=3024-day \
+> --net mongo-network \
+> --name mongo-express \
+> mongo-express  `
+    connect mongo-express to mongodb
+
+`
+sudo docker run -d \          
+-p 5000:27017 \
+-e MONGO_INITDB_ROOT_USERNAME=admin \
+-e MONGO_INITDB_ROOT_PASSWORD=password \
+--name mongodb \
+--net mongo-network \
+mongo
+`
+    create mongo CONTAINER
+
+------
+
+
+May 10
+------
+`sudo docker container start [name, id]` run a previous container
+yaml is the docker run command to file
+it map all the things in command to a file call yaml
+
+create docker compose file
+`sudo docker-compose -f (f mean file) [YOUR YAML FILE] [up, down] (up is running and down is stop)`
+
+
 
 ------
