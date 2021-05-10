@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=3c-iBn73dDE&t=1112s&ab_channel=TechWorldwithNana
 --CONTAINER Port vs HOST Port
 --`sudo docker exec -it redis bash` start docker from outside
 -- `sudo docker --name <YOUR NAME TO DOCKER CONTAINER>`
--- `sudo docker log <NAME OF CONTAINER>` 
+-- `sudo docker logs <NAME OF CONTAINER>` 
 -- get the terminal of the CONTAINER that is running
     -- `sudo docker ps` list all your CONTAINER are running
     -- `sudo docker exec -it <ID OR NAME OF CONTAINER> bin/bash` -it mean that interactive terminal
@@ -77,5 +77,19 @@ sudo docker run -d \
 mongo
 `
     create mongo CONTAINER
+
+------
+
+
+May 10
+------
+`sudo docker container start [name, id]` run a previous container
+yaml is the docker run command to file
+it map all the things in command to a file call yaml
+
+create docker compose file
+`sudo docker-compose -f (f mean file) [YOUR YAML FILE] [up, down] (up is running and down is stop)`
+
+
 
 ------
