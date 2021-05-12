@@ -90,6 +90,31 @@ it map all the things in command to a file call yaml
 create docker compose file
 `sudo docker-compose -f (f mean file) [YOUR YAML FILE] [up, down] (up is running and down is stop)`
 
+DOCKERFILE
+FROM
+ENV
+RUN // any linux command, which is run INSIDE container
+COPY // run on host machine
+
+
+
+docker volume
+
+plug the physical file system to the virtual file system of container
+3 types of volume
+    docker run -v /home/mount/data:/var/lib/mysql/data
+                    HOST            CONTAINER
+->> host volume
+
+    name volume
+    no name volume
+
+
+
+
+
+
+
 
 
 ------
