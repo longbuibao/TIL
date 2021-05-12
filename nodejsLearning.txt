@@ -1,3 +1,7 @@
 
 Query and Projection Operators mongodb
 https://docs.mongodb.com/manual/reference/operator/query
+
+
+Query and Projection Operators
+https://docs.mongodb.com/manual/reference/operator/update/
