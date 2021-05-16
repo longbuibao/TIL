@@ -9,3 +9,6 @@ https://docs.mongodb.com/manual/reference/operator/update/
 
 throw Error so you can use the `try{}catch(){}` block
 mongoose has a `validate` method to use your own validator
+
+
+you have to put `String of 12 bytes or a string of 24 hex characters` to mongodb _id Object
