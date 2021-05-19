@@ -12,3 +12,18 @@ mongoose has a `validate` method to use your own validator
 
 
 you have to put `String of 12 bytes or a string of 24 hex characters` to mongodb _id Object
+
+userSchema.pre('save', async function(next) {
+    const user = this
+    
+})
+next to the next function
+how can nodejs know when the pre function is done? next come into play
+
+[Notes on findAndUpdate() and Query Middleware]
+https://mongoosejs.com/docs/middleware.html#notes
+
+if(user.isModified('password'))
+create user-> true
+update user-> true
+create a middleware: not to write hash password in multiple place
