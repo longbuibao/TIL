@@ -27,3 +27,8 @@ if(user.isModified('password'))
 create user-> true
 update user-> true
 create a middleware: not to write hash password in multiple place
+
+
+research on [emty error object js vs error.message]
+https://stackoverflow.com/questions/38513493/why-are-my-js-promise-catch-error-objects-empty
+https://stackoverflow.com/questions/18391212/is-it-not-possible-to-stringify-an-error-using-json-stringify
