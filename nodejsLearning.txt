@@ -27,3 +27,15 @@ if(user.isModified('password'))
 create user-> true
 update user-> true
 create a middleware: not to write hash password in multiple place
+
+
+research on [emty error object js vs error.message]
+https://stackoverflow.com/questions/38513493/why-are-my-js-promise-catch-error-objects-empty
+https://stackoverflow.com/questions/18391212/is-it-not-possible-to-stringify-an-error-using-json-stringify
+
+authenticate => return a jwt
+use that jwt to authorize
+
+the goal of jwt
+    - not to hide data, you can see what the data is
+    - to VERIFY the data that you provied, to do something
