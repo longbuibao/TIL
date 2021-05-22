@@ -39,3 +39,6 @@ use that jwt to authorize
 the goal of jwt
     - not to hide data, you can see what the data is
     - to VERIFY the data that you provied, to do something
+
+
+userSchema.static is like static method of a class
