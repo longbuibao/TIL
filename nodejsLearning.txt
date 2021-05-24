@@ -42,3 +42,10 @@ the goal of jwt
 
 
 userSchema.static is like static method of a class
+
+Array.filter()
+
+
+
+
+
