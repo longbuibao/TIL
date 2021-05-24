@@ -63,6 +63,13 @@ userSchema.virtual('tasks', {
     foreignField: 'owner'
 })
 
+`Task Schema`
+owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        require: true,
+        ref: 'User'
+    }
+
 - create a virtual field, not going to store in the database
 - userSchema -> has `tasks` -> `tasks` is `ref` to `Task` -> (localField(_id)(user) <---connect to---> foreignField(owner)(task))
 
