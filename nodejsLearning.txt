@@ -45,6 +45,30 @@ userSchema.static is like static method of a class
 
 Array.filter()
 
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+						VIRTUAL PROPERTY
+
+- virtual property is not actual data stored in the database, it's a relationship between two entities, (in this case User and Task)
+- a way for Mongoose to figure out how these two things are related
+
+
+userSchema.virtual('tasks', {
+    ref: 'Task',
+    localField: '_id',
+    foreignField: 'owner'
+})
+
+- create a virtual field, not going to store in the database
+- userSchema -> has `tasks` -> `tasks` is `ref` to `Task` -> (localField(_id)(user) <---connect to---> foreignField(owner)(task))
+
+
+
+
 
 
 
