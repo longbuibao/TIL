@@ -75,7 +75,7 @@ owner: {
 
 
 
-
+git add . vs git add *
 
 
 
