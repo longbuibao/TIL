@@ -80,3 +80,18 @@ git add . vs git add *
 
 
 
+
+
+
+if you use @Eric's code up above comment, and delete user's avatar by set `avatarObject` to `undefined`, please read all these links:
+
+https://github.com/Automattic/mongoose/issues/5310
+https://mongoosejs.com/docs/guide.html#minimize
+https://mongoosejs.com/docs/api.html#document_Document-$isEmpty
+
+And edit @Eric's code to
+`if (user && !user.avatarObj.$isEmpty())` in the `router.get('/:id/avatar')`
+
+
+
+
