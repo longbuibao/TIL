@@ -93,5 +93,8 @@ And edit @Eric's code to
 `if (user && !user.avatarObj.$isEmpty())` in the `router.get('/:id/avatar')`
 
 
+write test with JEST
+
+
 
 
