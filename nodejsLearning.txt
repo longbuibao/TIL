@@ -95,6 +95,8 @@ And edit @Eric's code to
 
 write test with JEST
 
+having day off to do other things
+
 
 
 
