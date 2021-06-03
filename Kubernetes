@@ -1,0 +1,30 @@
+`kubectl get nodes`: trả về trạng thái của các node
+`kubectl get pod `: trả về thông tin của các `POD` đang chạy
+`kubectl get service`: trả về thông tin của component `SERVICE` 
+
+nhóm lệnh CRUD
+`kubectl create -h`: list ra những lệnh có sẵn của `kubectl create`
+ở đây có thể thấy k có lựa chọn nào để tạo `POD`, bởi vì ta chỉ tạo ra `POD` thông qua `DEPLOYMENT`
+
+tạo môt server nginx
+`kubectl create deployment nginx-deployment --image=nginx` 
+kiểm tra lại
+`kubectl get pod`
+thử thay đổi version của nginx
+
+`kubectl edit deployment nginx-deployment`
+
+`kubectl get pod ` để xem lại tình hình
+và sau đó 1 phiên bản mới đã được thay thế
+` kubectl describe pod [pod name]` hiển thị debug quá trình cài đặt `POD` này
+
+xong rồi thử cài mongodb
+`kubectl create deployment mongo-deployment --image=mongo` 
+vào terminal của `POD`
+`kubectl exec -it [POD NAME]  -- bin/bash`
+xóa 1 `DEPLOYMENT`
+`kubectl delete deployment [name of deployment]`  
+
+nhưng mà thường ngta k viết từng câu lệnh như vậy, thường tất cả những thông tin config sẽ được viết vào 1 file, và ta chỉ viêc chạy file đó bằng câu lệnh:
+`kubectl apply -f`
+nếu muốn đổi cái gì thì chỉ việc đổi trong file đó
